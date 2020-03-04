@@ -5,12 +5,12 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 ### GeneMarkS2
 - run GMS2, will create a folder for output in /home/apfennig3/Team1-GenePrediction/results/gms2<br/>
 ```
-    /home/apfennig3/Team1-GenePrediction/bin/run_gms2.sh <path_to_genome>
+    ./run_gms2.sh <path_to_genome>
 ```
 ### Glimmer3 
 - run Glimmer3, will create a folder for output in /home/apfennig3/Team1-GenePrediction/<br/>
 ```
-    /home/apfennig3/Team1-GenePrediction/bin/run_glimmer3.sh <path_to_genome> 
+    ./run_glimmer3.sh <path_to_genome> 
 ```
 
 ### Compare predictions of ab-initio CDS predicting tools
@@ -46,7 +46,7 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 ### RNAmmer
 - run RNAmmer, will create a folder for output in /home/apfennig3/Team1-GenePrediction/results/rnammer<br/>
 ```
-    /home/apfennig3/Team1-GenePrediction/bin/run_glimmer3.sh <path_to_genome>
+    ./run_glimmer3.sh <path_to_genome>
 ```
 
 ## Run final pipeline
