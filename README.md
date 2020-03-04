@@ -51,15 +51,16 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 
 ## Run final pipeline
 The pipeline uses the DFAST framework to run the tools in a parallel manner. Thus, allows to analyze a complete E.coli genome within approximately 26 seconds.<br/>
-By default the pipeline executes Prodigal the CDS prediction, Aragorn for tRNA prediction, barrnarp for rRNA prediction and for CRISPR prediction. However, optionally GeneMarkS2 can applied for the CDS prediction instead of Prodigal and RNAmmer for the rRNA prediction instead of barrnarp. These tools produce equivalent results but run significantly slower.<br/>
+By default the pipeline executes Prodigal the CDS prediction, Aragorn for tRNA prediction, barrnarp for rRNA prediction and for CRISPR prediction. However, optionally GeneMarkS2 can applied for the CDS prediction instead of Prodigal, RNAmmer for the rRNA prediction instead of barrnarp and tRNAscan-SE for the tRNA prediction instead of Aragorn. These tools produce equivalent results but run significantly slower.<br/>
 
 ### Usage:
 ```
 ./run_dfast.sh -h <help>
      -i path to input genome (FASTA format) 
      -o output directory
-     [-g] run GeneMarkS2 instead of PRodigal for CDS prediction
+     [-g] run GeneMarkS2 instead of Prodigal for CDS prediction
      [-r] run RNAmmer instead of barrnarp for rRNA prediction 
+     [-t] run tRNAscan-SE instead of Aragorn for tRNA prediction
      [-v] verbosity
 ```
 

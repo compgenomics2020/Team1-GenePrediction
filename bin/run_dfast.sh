@@ -4,11 +4,12 @@ source activate geneprediction
 v=0
 g=0
 r=0
-while getopts ":hi:o:grv" opt
+t=0
+while getopts ":hi:o:grtv" opt
 do
     case $opt in
        h )
-         echo " -i <input of file> -o <path to output> -g <run GMS2 instead of prodigal> -r <run RNAmmer instead of barrnarp> -v <verbose> "
+         echo " -i <input of file> -o <path to output> -g <run GMS2 instead of prodigal> -r <run RNAmmer instead of barrnarp> -t <run tRNAscan-SE instead of Aragorn> -v <verbose> "
          ;;
        i )
          i=$OPTARG
@@ -21,6 +22,9 @@ do
          ;;
        g )
          g=1
+         ;;
+       t )
+         t=1
          ;;
        v )
          v=1
@@ -51,13 +55,22 @@ else
     cds_tool='--use_prodigal'
 fi
 
-# run dfast with or without RNAmmer
+base_command="./dfast_core/dfast -g ${genome} -o tmp_dfast --organism Ecoli --minimum_length 120 ${cds_tool} --gcode 11 --cpu 8"
+
+# run dfast with RNAmmer instead of barrnap
 if [ "$r" -eq 1 ]
 then
-    ./dfast_core/dfast -g $genome -o tmp_dfast --organism Ecoli --minimum_length 120 $cds_tool --gcode 11 --cpu 8 --use_rnammer bact
-else
-    ./dfast_core/dfast -g $genome -o tmp_dfast --organism Ecoli --minimum_length 120 $cds_tool --gcode 11 --cpu 8
+    base_command="${base_command} --use_rnammer bact"
+    echo $base_command
 fi
+
+# run dfast with trnascane instead of aragorn
+if [ "$t" -eq 1 ]
+then
+    base_command="${base_command} --use_trnascan bact"
+fi
+
+$base_command
 
 # move files in final path and clean up
 mv tmp_dfast/genome.gff ${output}${genome_name}.gff
