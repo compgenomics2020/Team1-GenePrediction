@@ -1,4 +1,4 @@
-#Team 1 Gene Prediction
+# Team 1 Gene Prediction
 For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.edu/Team_I_Gene_Prediction_Group)<br/>
 
 ## Run tools for valdiation purposes
