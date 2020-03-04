@@ -3,6 +3,7 @@ from matplotlib_venn import venn3_unweighted
 import matplotlib.pyplot as plt
 
 def read_gene_counts():
+    # read gene counts
     tool_counts_dict = {}
     with open('/home/projects/group-a/Team1-GenePrediction/bin/gene_counts.txt', 'r') as f:
         for line in f:
@@ -11,6 +12,7 @@ def read_gene_counts():
     return tool_counts_dict
 
 def infer_actual_numbers(counts):
+    # computes counts for each field of Venn
     all = counts['GMS2_Prodigal_Glimmer']
     counts['GMS2_Prodigal'] -= all
     counts['GMS2_Glimmer'] -= all
@@ -21,6 +23,7 @@ def infer_actual_numbers(counts):
     return counts
 
 def plot_venn_diagram(counts):
+    # plot venn diagram
     fig, ax = plt.subplots()
     v = venn3_unweighted(subsets=(counts['GMS2'], counts['Prodigal'], counts['GMS2_Prodigal'],
                        counts['Glimmer'], counts['GMS2_Glimmer'], counts['Prodigal_Glimmer'],
