@@ -46,7 +46,7 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 ### RNAmmer
 - run RNAmmer, will create a folder for output in /home/apfennig3/Team1-GenePrediction/results/rnammer<br/>
 ```
-    ./run_glimmer3.sh <path_to_genome>
+    ./run_rnammer.sh <path_to_genome>
 ```
 
 ## Run final pipeline
@@ -69,4 +69,14 @@ The output will be four files:
 * File with protein sequences of predicted genes in FASTA format (*_protein.faa)
 * File with nucleotide sequences of predicted coding genes in FASTA format (*_cds.fna)
 * File with nucleotide sequences of predicted RNA genes in FASTA format (*_rna.fna)
- 
+
+### Citations
+* stand-alone version (DFAST-core)
+DFAST: a flexible prokaryotic genome annotation pipeline for faster genome publication.
+Bioinformatics; 2018; 34(6): 1037–1039.
+Yasuhiro TANIZAWA, Takatomo FUJISAWA, Yasukazu NAKAMURA
+[https://academic.oup.com/bioinformatics/article/34/6/1037/4587587](https://academic.oup.com/bioinformatics/article/34/6/1037/4587587)
+* Lomsadze, A., Gemayel, K., Tang, S., & Borodovsky, M. (2018). Modeling leaderless transcription and atypical genes results in more accurate gene prediction in prokaryotes. Genome research, 28(7), 1079–1089. https://doi.org/10.1101/gr.230615.117
+* A.L. Delcher, K.A. Bratke, E.C. Powers, and S.L. Salzberg. Identifying bacterial genes and endosymbiont DNA with Glimmer, Bioinformatics 23:6 (2007), 673-679.
+* Lagesen, K., Hallin, P., Rødland, E. A., Staerfeldt, H. H., Rognes, T., & Ussery, D. W. (2007). RNAmmer: consistent and rapid annotation of ribosomal RNA genes. Nucleic acids research, 35(9), 3100–3108. https://doi.org/10.1093/nar/gkm160
+* Buchfink B, Xie C, Huson DH. Fast and sensitive protein alignment using DIAMOND. Nat Methods. 2015;12(1):59–60. doi:10.1038/nmeth.3176
