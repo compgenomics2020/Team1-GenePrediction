@@ -3,7 +3,15 @@
 #requires nr db from ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz
 #acession to taxid mapping from ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/prot.accession2taxid.gz
 #and nodesdmp from within ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdmp.zip
-# filter the db for Enterobacteriaceae by taxon id 543
-path_to_db="/home/projects/group-a/Team1-GenePrediction/db"
 
-/home/projects/group-a/bin/Diamond makedb --in ${path_to_db}/nr/nr.gz -d ${path_to_db}/nr_enterobacteriaceae --taxonmap ${path_to_db}/prot.accession2taxid.gz --taxonnodes ${path_to_db}/taxdmp/nodes.dmp --threads 8 --taxonlist 543
+# filter the nr db for Enterobacteriaceae by taxon id 543
+path_to_db="/home/projects/group-a/Team1-GenePrediction/db"
+#/home/projects/group-a/bin/Diamond makedb --in ${path_to_db}/nr/nr.gz -d ${path_to_db}/nr_enterobacteriaceae --taxonmap ${path_to_db}/prot.accession2taxid.gz --taxonnodes ${path_to_db}/taxdmp/nodes.dmp --threads 8 --taxonlist 543
+
+# filter the nr db for Escherichia genus level by taxon id 561
+path_to_db="/home/projects/group-a/Team1-GenePrediction/db"
+/home/projects/group-a/bin/Diamond makedb --in ${path_to_db}/nr/nr.gz -d ${path_to_db}/nr_escherichia --taxonmap ${path_to_db}/prot.accession2taxid.gz --taxonnodes ${path_to_db}/taxdmp/nodes.dmp --threads 8 --taxonlist 561
+
+
+# based on uniprot
+#/home/projects/group-a/bin/Diamond makedb --in ${path_to_db}/swissprot/uniprot_sprot.fasta.gz -d ${path_to_db}/swissprot
