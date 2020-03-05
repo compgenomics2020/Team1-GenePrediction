@@ -65,11 +65,15 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 ```
 ### Aragorn
 -runs Aragorn on isolates, it will place the results in /home/projects/group-a/Team1-GenePrediction/results/Aragorn_results<br/>
--runs Aragorn with the following options:
-    -w for batch output (batch is easily converted to gff)
-    -seq displays the sequence of predicted tRNAs
-    -o output file
+- it runs Aragorn with the following options:
+-       -w for batch output (batch is easily converted to gff)
+-       -seq displays the sequence of predicted tRNAs
+-       -o output file
 
+- The command is: 
+```
+    ./Aragorn_run.sh
+```
 ## Run final pipeline
 The pipeline uses the DFAST framework to run the tools in a parallel manner. Thus, allows to analyze a complete E.coli genome within approximately 26 seconds.<br/>
 By default the pipeline executes Prodigal the CDS prediction, Aragorn for tRNA prediction, barrnarp for rRNA prediction and for CRISPR prediction. However, optionally GeneMarkS2 can applied for the CDS prediction instead of Prodigal, RNAmmer for the rRNA prediction instead of barrnarp and tRNAscan-SE for the tRNA prediction instead of Aragorn. These tools produce equivalent results but run significantly slower.<br/>
