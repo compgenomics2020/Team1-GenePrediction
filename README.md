@@ -48,6 +48,21 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 ```
     ./run_rnammer.sh <path_to_genome>
 ```
+### tRNAscan-SE
+- runs tRNAscan-SE on the isolates, it will place the results in /home/projects/group-a/Team1-GenePrediction/results/tRNAscan-SE_results<br/>
+- it runs tRNAscan-SE with the following options:
+-       -B for bacteria
+-       -L for legacy mode (the standard mode) (tRNAscan, EufindtRNA, and COVE)
+-       -H shows the breakdown of the primary structure componenets to covariance model bit scores
+-       -o output file
+-       -f file with structural visualization
+-       -m run stats file
+-       -b bed file
+-       -a fasta file
+- The command is: 
+```
+    ./tRNAscan_tool.py
+```
 
 ## Run final pipeline
 The pipeline uses the DFAST framework to run the tools in a parallel manner. Thus, allows to analyze a complete E.coli genome within approximately 26 seconds.<br/>
