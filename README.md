@@ -63,6 +63,12 @@ For more information refer to our [Wiki](https://compgenomics2020.biosci.gatech.
 ```
     ./tRNAscan_tool.py
 ```
+### Aragorn
+-runs Aragorn on isolates, it will place the results in /home/projects/group-a/Team1-GenePrediction/results/Aragorn_results<br/>
+-runs Aragorn with the following options:
+    -w for batch output (batch is easily converted to gff)
+    -seq displays the sequence of predicted tRNAs
+    -o output file
 
 ## Run final pipeline
 The pipeline uses the DFAST framework to run the tools in a parallel manner. Thus, allows to analyze a complete E.coli genome within approximately 26 seconds.<br/>
