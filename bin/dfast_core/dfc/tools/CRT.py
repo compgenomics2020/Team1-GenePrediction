@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/home/apfennig3/anaconda3/envs/geneprediction/bin/python3.8
 # coding: UTF8
 
 import os
@@ -39,6 +39,7 @@ class CRT(StructuralAnnotationTool):
     def __init__(self, options=None, workDir="OUT"):
         """
         """
+       
         if options is None:
             options = {}
         jar_file = options.get("jar_file", "")

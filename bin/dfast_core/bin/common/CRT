@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/apfennig3/anaconda3/envs/geneprediction/bin/python3.8
 
 __version_major__ = 1
 __version_minor__ = 0

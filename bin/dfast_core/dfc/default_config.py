@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/home/apfennig3/anaconda3/envs/geneprediction/bin/python3.8
 # coding:utf8
 
 import multiprocessing

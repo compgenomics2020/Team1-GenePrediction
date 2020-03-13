@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/home/apfennig3/anaconda3/envs/geneprediction/bin/python3.8
 # coding: UTF8
 
 import os
@@ -52,6 +52,7 @@ class StructuralAnnotation(object):
 
         for tool_config in self.configs:
             Tool = TOOLS.get(tool_config["tool_name"])
+            #import pdb; pdb.set_trace()
             if Tool:
                 if tool_config.get("enabled"):
                     tool = Tool(options=tool_config.get("options", {}), workDir=self.workDir)

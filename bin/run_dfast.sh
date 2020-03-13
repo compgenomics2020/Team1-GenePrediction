@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 #activate environment
-source activate geneprediction
+#source activate geneprediction
 v=0
 g=0
 r=0

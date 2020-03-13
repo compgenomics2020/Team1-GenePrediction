@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/home/apfennig3/anaconda3/envs/geneprediction/bin/python3.8
 # coding: UTF8
 
 from .base_tools import StructuralAnnotationTool
@@ -33,7 +33,7 @@ class Prodigal(StructuralAnnotationTool):
 
     def getCommand(self):
         """prodigal -f gff genome.fna > out.gff 2> out.log"""
-        cmd = ["prodigal", self.cmd_options, "-g", str(self.transl_table), "-f", "gff", "-i", self.genomeFasta, ">", self.outputFile, "2>", self.logFile]
+        cmd = ["/home/apfennig3/anaconda3/envs/geneprediction/bin/prodigal", self.cmd_options, "-g", str(self.transl_table), "-f", "gff", "-i", self.genomeFasta, ">", self.outputFile, "2>", self.logFile]
         return cmd
 
 
